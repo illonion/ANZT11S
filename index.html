@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/gameplay.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;700;800&family=Tsukimi+Rounded:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <section id="top">
+            <div class="teamSection" id="redTeamSection">
+                <div class="teamProfilePicCombination">
+                    <img class="playerProfilePicture" id="player1ProfilePicture" src="https://a.ppy.sh/12561202">
+                    <img class="playerProfilePicture" id="player2ProfilePicture" src="https://a.ppy.sh/4585661">
+                </div>
+                <div class="teamName" id="redTeamName">A really good name</div>
+                <div class="teamStars" id="redTeamStars"></div>
+                <div class="amplifierImagesContainer" id="redAmplifierImagesContainer">
+                    <div class="amplifierContainer" id="redAmplifier1"><img class="amplifierImage" id="redAmplifier1Image" src="static/amplifiers/1.png"></div>
+                    <div class="amplifierContainer" id="redAmplifier2"><img class="amplifierImage" id="redAmplifier2Image" src="static/amplifiers/2.png"></div>
+                </div>
+            </div>
+            <div class="teamSection" id="blueTeamSection">
+                <div class="teamProfilePicCombination">
+                    <img class="playerProfilePicture" id="player3ProfilePicture" src="https://a.ppy.sh/12561202">
+                    <img class="playerProfilePicture" id="player4ProfilePicture" src="https://a.ppy.sh/4585661">
+                </div>
+                <div class="teamName" id="blueTeamName">TKieen</div>
+                <div class="teamStars" id="blueTeamStars"></div>
+                <div class="amplifierImagesContainer" id="blueAmplifierImagesContainer">
+                    <div class="amplifierContainer" id="blueAmplifier1"><img class="amplifierImage" id="blueAmplifier1Image" src="static/amplifiers/1.png"></div>
+                    <div class="amplifierContainer" id="blueAmplifier2"><img class="amplifierImage" id="blueAmplifier2Image" src="static/amplifiers/2.png"></div>
+                </div>
+            
+            </div>
+            <!-- Logo-->
+            <img class="logo" src="static/logo.png" alt="Image of ANZT11S Logo">
+            <img class="logo" src="static/logo.png" alt="Image of ANZT11S Logo">
+        </section>
+        <section id="bottom">
+            <!-- Current Scores -->
+            <div id="currentScores">
+                <div class="currentScore currentScoreLeft" id="redCurrentScore">1,000,000</div>
+                <div class="currentScore currentScoreLeft" id="redCurrentCombo"><span id="redCurrentComboNumber"></span>x</div>
+                <div class="currentScore currentScoreLeft" id="redCurrentAccuracy"><span id="redCurrentAccuracyNumber"></span>%</div>
+                <div class="currentScoreRectangle" id="redCurrentScoreRectangle"></div>
+                <div class="currentScoreRectangle" id="blueCurrentScoreRectangle"></div>
+                <div class="currentScore currentScoreRight" id="blueCurrentScore">1,000,000</div>
+                <div class="currentScore currentScoreRight" id="blueCurrentCombo"><span id="blueCurrentComboNumber"></span>x</div>
+                <div class="currentScore currentScoreRight" id="blueCurrentAccuracy"><span id="blueCurrentAccuracyNumber"></span>%</div>
+            </div>
+            <!-- Score Differences -->
+            <div id="scoreDifferences">
+                <div class="scoreDifferencesLine" id="scoreDifferencesLeftLine"></div>
+                <div class="scoreDifferencesDiamond" id="scoreDifferencesLeftDiamond"></div>
+                <div class="differenceCurrentScore" id="differenceCurrentScore">500,000</div>
+                <div class="differenceCurrentScore" id="differenceCurrentCombo"><span id="differenceCurrentComboNumber"></span>x</div>
+                <div class="differenceCurrentScore" id="differenceCurrentAccuracy"><span id="differenceCurrentAccuracyNumber"></span>%</div>
+                <div class="scoreDifferencesDiamond" id="scoreDifferencesRightDiamond"></div>
+                <div class="scoreDifferencesLine" id="scoreDifferencesRightLine"></div>
+            </div>
+            <!-- Bottom Amplifier Container -->
+            <div id="bottomAmplifierContainer">
+                <img id="bottomAmplifierImage" src="static/amplifiers/1.png">
+                <div id="bottomAmplifierDescription"><p>Each miss a player on your team gets adds 0.5% to their score, up to 15% (Played with scorev2).</p></div>
+            </div>
+            <!-- Round Information -->
+            <div id="roundInformation">
+                <div class="roundInformationText" id="matchText">Match <span id="matchNumber">727</span></div>
+                <div class="roundInformationText" id="stageText">Grand Finals</div>
+            </div>
+            <!-- Chat -->
+            <div id="chatDisplay">
+                <div id="chatDisplayDottedLine">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2" height="195" viewBox="0 0 2 195" fill="none">
+                        <line opacity="0.3" x1="1" y1="1" x2="0.999991" y2="199" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="0.2 10"/>
+                    </svg>
+                </div>
+                <div id="chatDisplayLeft"></div>
+                <div id="chatDisplayRight">
+                    <div id="chatDisplayRightText">CHAT</div>
+                    <img id="chatDisplayRightIcon" src="static/chatIcon.png">
+                </div>
+            </div>
+            <!-- Now Playing -->
+            <div id="nowPlaying">
+                <div id="nowPlayingBackgroundLayer"></div>
+                <div class="nowPlayingSongDetails" id="nowPlayingSongTitle">Minstein - First Flight</div>
+                <div class="nowPlayingSongDetails" id="nowPlayingDifficultySetCreator"><span id="nowPlayingDifficulty">Fly Away</span> by <span id="nowPlayingSetCreator">NekoShabeta</span></div>
+                <div class="nowPlayingPickedBySection" id="nowPlayingCircle">NM1</div>
+                <div class="nowPlayingPickedBySection" id="nowPlayingPickedBy">picked by <span id="nowPlayingPickedByTeam">RED</span></div>
+                <section id="nowPlayingMapStats">
+                    <div class="nowPlayingMapStatRegular" id="nowPlayingMapStatsCS">CS <span id="nowPlayingMapStatsCSNumber">4.0</span></div>
+                    <div class="nowPlayingMapStatRegular" id="nowPlayingMapStatsAR">AR <span id="nowPlayingMapStatsARNumber">9.6</span></div>
+                    <div id="nowPlayingMapStatsSRNumber">7.27</div>
+                    <div class="nowPlayingMapStatRegular" id="nowPlayingMapStatsOD">OD <span id="nowPlayingMapStatsODNumber">9.0</span></div>
+                    <div class="nowPlayingMapStatRegular" id="nowPlayingMapStatsBPM">BPM <span id="nowPlayingMapStatsBPMNumberMin">240</span><span id="nowPlayingMapStatsBPMDash"> - </span><span id="nowPlayingMapStatsBPMNumberMax">240</span></div>
+                </section>
+            </div>
+            <!-- Commentators -->
+            <div id="commentatorsSection">
+                <img id="micophone" src="static/microphone.png" alt="Microphone Icon">
+                <img id="road" src="static/road.png" alt="Commentator Section Underline">
+                <div id="voiceLine">Voice line</div>
+            </div>
+        </section>
+    </div>
+    <div id="navBar">
+        <section id="navBarColumn1">
+            <div id="navBarMatch">
+                <h1>Set the match number</h1>
+                <input type="text" id="navBarMatchText">
+                <button class="navBarButton navBarFullWidthButton" onclick="handleMatchNumber()">Submit Change</button>
+            </div><br><hr>
+            <div id="navBarRound">
+                <h1>Set the current round</h1>
+                <div id="navBarRoundButtonContainer">
+                    <button class="navBarButton navBarRoundButton" onclick="changeRound('Round of 32')">RO32</button>
+                    <button class="navBarButton navBarRoundButton" onclick="changeRound('Round of 16')">RO16</button>
+                    <button class="navBarButton navBarRoundButton" onclick="changeRound('Quarterfinals')">QF</button>
+                    <button class="navBarButton navBarRoundButton" onclick="changeRound('Semifinals')">SF</button>
+                    <button class="navBarButton navBarRoundButton" onclick="changeRound('Finals')">F</button>
+                    <button class="navBarButton navBarRoundButton" onclick="changeRound('Grand Finals')">GF</button>
+                </div>
+            </div><br><hr>
+            <div id="navBarPickedBy">
+                <h1>Set who the current map is picked by</h1>
+                <div id="navBarPickedByButtonContainer">
+                    <button class="navBarButton navBarFullWidthButton" onclick="changePickedBy('red')">Team Red</button>
+                    <button class="navBarButton navBarFullWidthButton" onclick="changePickedBy('blue')">Team Blue</button>
+                </div>
+            </div><br><hr>
+            <div id="navBarSetStarCount">
+                <h1>Star Counts?</h1>
+                <div id="navBarPickedByButtonContainer">
+                    <button class="navBarButton navBarHalfWidthButton" onclick="changeStarCount('red','add')">Red ++</button>
+                    <button class="navBarButton navBarHalfWidthButton" onclick="changeStarCount('red','minus')">Red --</button>
+                    <button class="navBarButton navBarHalfWidthButton" onclick="changeStarCount('blue','add')">Blue ++</button>
+                    <button class="navBarButton navBarHalfWidthButton" onclick="changeStarCount('blue','minus')">Blue --</button>
+                    <button class="navBarButton navBarHalfWidthButton" id="resetStarsButton" onclick="resetStars()">Reset Stars</button>
+                    <button class="navBarButton navBarHalfWidthButton" id="starToggleButton" onclick="toggleStars()">Stars:<br><span id="starToggle">ON</span></button>
+                </div>
+            </div>
+        </section>
+        <div id="navBarColumnSeparator"></div>
+        <section id="navBarColumn2">
+            <div id="redAmplifiers">
+                <h1>Red Amplifiers</h1>
+                <div id="redAmplifierButtons">
+                </div>
+            </div><br><hr>
+            <div id="blueAmplifiers">
+                <h1>Blue Amplifiers</h1>
+                <div id="blueAmplifierButtons">
+                </div>
+            </div><br><hr>
+            <div id="currentAmplifiers">
+                <h1>Current Amplifiers</h1>
+                <div>Team: <span id="currentAmplifierTeam"></span></div>
+                <div id="currentAmplifierName"></div>
+            </div><br><hr>
+            <button class="navBarButton navBarFullWidthButton" onclick="resetCurrentAmplifier()">Reset Amplifiers</button>
+        </section>
+    </div>
+
+    <script src="deps/reconnecting-websocket.min.js"></script>
+    <script src="deps/countUp.js"></script>
+    <script src="deps/loadData.js"></script>
+    <script src="deps/index.js"></script>
+    <script src="deps/gameplay.js"></script>
+</body>
+</html>

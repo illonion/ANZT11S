@@ -1,0 +1,245 @@
+@font-face {
+    font-family: "TorusPro Semibold";
+    src: url("../fonts/TorusPro-SemiBold.ttf")
+}
+@font-face {
+    font-family: "TorusPro Regular";
+    src: url("../fonts/TorusPro-Regular.ttf")
+}
+
+#main {
+    position: absolute; top: 0; left: 0;
+    width: 1920px; height: 1080px;
+}
+
+/* ---------- TOP SECTION ---------- */ 
+/* Team Sections */
+.teamSection { position: absolute; top: 17px; }
+#redTeamSection { left: 17px; }
+#blueTeamSection { right: 17px; }
+/* Profile Pictures */
+.teamProfilePicCombination {
+    width: 100px; height: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.playerProfilePicture {
+    width: 50px; height: 100px;
+    object-fit: cover;
+}
+#player1ProfilePicture, #player3ProfilePicture { object-position: left; }
+#player2ProfilePicture, #player4ProfilePicture {
+    position: absolute; left: 50px;
+    object-position: right;
+    border-radius: 0px 5px 5px 0px;
+}
+/* Team Names */
+.teamName {
+    position: absolute; top: 0;
+    font-family: 'Tsukimi Rounded', sans-serif; font-size: 40px;
+    letter-spacing: 1.2px;
+    color: white;
+    white-space: nowrap;
+}
+#redTeamName { left: 116px; }
+#blueTeamName { right: 116px; }
+/* Stars */
+.teamStars {
+    position: absolute; top: 70px; 
+    display: flex;
+}
+#redTeamStars { left: 116px; }
+#blueTeamStars { 
+    right: 116px; 
+    flex-direction: row-reverse;
+}
+/* Star Image Div */
+.starDivLeft { margin-right: 18px; }
+.starDivRight { margin-left: 18px; }
+/* Star Image */
+.starImage { 
+    position: relative;
+    width: 22px; height: 22px; 
+    opacity: 1;
+    transition: 0.5ms;
+}
+.starImageLeft { transform: scaleX(-1) rotate(-18deg); }
+.starImageRight { transform: scaleX(-1) rotate(18deg); }
+
+/* Logo */
+.logo { 
+    position: absolute; top: 9px; left: 50%; transform: translateX(-50%); 
+    height: 110px;
+}
+
+/* ---------- BOTTOM SECTION ---------- */ 
+#bottom {
+    position: absolute; bottom: 0;
+    width: 1920px; height: 226px;
+}
+
+/* Round Information */
+.roundInformationText { 
+    color: white; 
+    position: absolute;
+}
+#matchText {
+    top: 145px; left: 14px;
+    font-family: "Playpen Sans"; font-size: 24px; font-weight: 400;
+    text-indent: 0.36px;
+    opacity: 0;
+}
+#stageText {
+    top: 171px; left: 12px;
+    font-family: "Playpen Sans"; font-size: 32px; font-weight: 700;
+    letter-spacing: 0.96px;
+    color: #FFDE9D;
+}
+
+/* Chat Display */
+#chatDisplay {
+    position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 810px; height: 200px;
+    border-radius: 10px 10px 0 0;
+    background-color: #D9CEBE;
+    overflow: hidden;
+    z-index: 1;
+    font-family: 'Playpen Sans', cursive;
+}
+/* Chat Display Dotted Line */
+#chatDisplayDottedLine {
+    overflow: none;
+    position: absolute; top: 6px; left: 82px;
+    height: 189px;
+}
+/* Chat Display Left Hand Side */
+#chatDisplayLeft {
+    width: 770px; height: 192px;
+    margin-top: 5px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#chatDisplayLeft::-webkit-scrollbar { display: none; }
+.chatMessageContainer { display: flex; }
+.chatDisplayTime {
+    width: 77px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.51px;
+    text-indent: 0.255px;
+    color: #705943;
+}
+.chatDisplayWholeMessage {
+    width: 669px;
+    margin-left: 24px;
+    letter-spacing: 0.51px;
+    text-indent: 0.255px;
+}
+.chatDisplayName { font-weight: 700; }
+.chatDisplayMessage { color: #462715; }
+.left { color: #B92323 }
+.right { color: #325CC8 }
+.unknown { color: #2A8B5C }
+.bot { color: #E75480 }
+/* Chat Display Right Hand Side */
+#chatDisplayRight {
+    position: absolute; top: 0; right: 0;
+    width: 40px; height: 200px;
+    background-color: #48423D;
+}
+#chatDisplayRight > * { position: absolute; left: 50%; transform: translateX(-50%); }
+#chatDisplayRightText {
+    top: 7px; 
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-weight: 800;
+    color: #D9CEBE;
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    text-indent: 0.27px;
+}
+#chatDisplayRightIcon { bottom: 7.5px; }
+
+/* Commentators Section */ 
+#commentatorsSection {
+    position: absolute; top: 80px; right: 0;
+    width: 315px; height: 146px;
+}
+#micophone { position: absolute; top: 16px; right: 106px; }
+#road { position: absolute; top: 38px; left: 2px; }
+#voiceLine {
+    position: absolute; top: 10px; right: 8.5px;
+    font-family: 'Playpen Sans', cursive; font-weight: 500; font-size: 18px;
+    letter-spacing: 0.4px;
+    color: #AA9791;
+}
+
+/* Nav Bar */
+#navBar {
+    position: absolute; top: 0; left: 1920px;
+    width: 500px; height: 1080px;
+    background-color: rgb(29,60,86);
+    color: white;
+    font-family: "TorusPro Semibold";
+}
+#navBarColumn1 {
+    width: 250px; height: inherit;
+}
+#navBarColumn1 { text-align: center; }
+#navBarMatch h1, #navBarRound h1, #navBarPickedBy h1, #navBar, #navBarRemoveMap h1, #navBarSetStarCount h1, #redAmplifiers h1, #blueAmplifiers h1, #currentAmplifiers h1 {
+    text-align: center;
+    font-size: 24px;
+}
+#navBarMatchText {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.navBarButton {
+    background-color: transparent;
+    font-size: 16px;
+    border-color: white;
+    color: white;
+    height: 60px;
+}
+.navBarButton:active {
+    background-color: white;
+    color: black;
+}
+.navBarHalfWidthButton {
+    width: 90px;
+    border-radius: 10px;
+    margin: 5px 5px;
+}
+.navBarFullWidthButton {
+    width: 190px;
+    border-radius: 10px;
+    margin: 5px 5px;
+}
+.navBarRoundButton {
+    border-radius: 10px;
+    width: 60px;
+    margin: 5px 5px;
+}
+#navBarColumnSeparator {
+    position: absolute; top: 0; left: 249px;
+    width: 2px; height: 1920px;
+    background-color: white;
+}
+#navBarColumn2 {
+    position: absolute; top: 0; left: 250px;
+    width: 250px;
+}
+#starToggleButton {
+    background-color: green;
+}
+#resetStarsButton {
+    background-color: white;
+    color: black;
+}
+#resetStarsButton:active {
+    background-color: transparent;
+    color: white;
+}

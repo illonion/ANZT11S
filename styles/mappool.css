@@ -1,0 +1,140 @@
+#main { background-image: url("../static/mappool.png"); }
+
+/* ---------- MAPPOOL SIDES ---------- */
+.mappoolSide {
+    position: absolute; top: 122px;
+    display: flex; flex-direction: column; justify-content: center;
+    width: 0px;
+    height: 744px;
+}
+#mappoolSide1 { left: 44px; }
+#mappoolSide2  { right: 44px; }
+.mappoolSide > * { display: flex; align-self: center; }
+
+/* ---------- MAPPOOL SECTION ---------- */
+#mappool {
+    position: absolute; top: 122px;
+    width: 1920px; height: 744px;
+    display: flex; flex-direction: column; justify-content: center;
+}
+.modRow {
+    width: 1920px;
+    display: flex;
+    justify-content: center;
+}
+.mappoolMap {
+    position: relative;
+    width: 330px; height: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: "Roboto"; font-weight: 700;
+    margin: 12px 12px;
+}
+.mappoolMap > *  { position: absolute; }
+.mappoolMapLayer {
+    top: 0; left: 0;
+    width: inherit; height: inherit;
+    background-color: rgba(0,0,0,0.6)
+}
+.rankedStatusImage {
+    top: 7px; left: 6px;
+    width: 12px; height: 12px;
+}
+.rankedStatusText {
+    top: 7px; left: 21px;
+    font-weight: 500; font-size: 10px;
+    letter-spacing: 1px;
+}
+.mappoolMapMod {
+    top: 5px; right: 5px;
+    width: 40px; height: 16px;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 900; font-size: 10px;
+    letter-spacing: 0.3px; text-indent: 0.15px;
+    line-height: 16px;
+}
+.mappoolMapMainText {
+    width: 318px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mappoolMapDifficulty {
+    top: 25px; left: 6px;
+    font-size: 16px;
+    letter-spacing: 0.48px;
+}
+.mappoolMapSongName {
+    top: 47px; left: 6px;
+    font-size: 24px;
+    letter-spacing: 0.72px;
+}
+/* Stats */
+.mappoolMapBottomArea {
+    top: 78px;
+    width: inherit; height: 22px;
+}
+.mappoolMapStatsContainer { background-color: #2C2C2C; }
+.mappoolMapStatsLeft { display: flex; }
+.mappoolMapStats {
+    width: 50px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    margin-right: 18px;
+}
+.mappoolMapStatsSR {
+    position: absolute; top: 0; right: 8px;
+    line-height: 22px;
+    color: #FFC960;
+    font-size: 16px;
+    letter-spacing: 0.48px; text-indent: 0.48px;
+}
+/* Pick Ban */
+.mappoolMapPickBanContainer {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    line-height: 22px;
+}
+.redPickBanProtectBackground {
+    background-color: #D14B4B;
+    color: #522020;
+}
+.bluePickBanProtectBackground {
+    background-color: #4B89D1;
+    color: #203752;
+}
+.mappoolMapPickBanLeftText {
+    margin-left: 6px
+}
+.mappoolMapPickBanTeam {
+    font-weight: 900;
+}
+.nowPlayingMapBanImage {
+    position: absolute; left: 299px; top: 5px;
+}
+.nowPlayingMapPickImage {
+    position: absolute; left: 297px; top: 5px;
+}
+
+/* ---------- MAPPOOL BOTTOM SECTION ---------- */
+.mappoolBottomText {
+    position: absolute; top: 774px; 
+    font-family: "Playpen Sans"; font-weight: 800; font-size: 40px;
+    color: #FFE7AB;
+    letter-spacing: 0.7px;
+}
+.currentActionTeamRed { color: #FF6E6E; }
+.currentActionTeamBlue { color: #71b3fd; }
+#currentActionText {
+    width: 405px;
+    left: 194px;
+    text-align: center;
+}
+#mappoolSelection { left: 1313px; }

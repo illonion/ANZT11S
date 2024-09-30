@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/mappool.css">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500;700;800&family=Roboto:wght@500;700&family=Tsukimi+Rounded:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="main">
+            <section id="top">
+                <div class="teamSection" id="redTeamSection">
+                    <div class="teamProfilePicCombination">
+                        <img class="playerProfilePicture" id="player1ProfilePicture" src="https://a.ppy.sh/12561202">
+                        <img class="playerProfilePicture" id="player2ProfilePicture" src="https://a.ppy.sh/4585661">
+                    </div>
+                    <div class="teamName" id="redTeamName">A really good name</div>
+                    <div class="teamStars" id="redTeamStars"></div>
+                </div>
+                <div class="teamSection" id="blueTeamSection">
+                    <div class="teamProfilePicCombination">
+                        <img class="playerProfilePicture" id="player3ProfilePicture" src="https://a.ppy.sh/12561202">
+                        <img class="playerProfilePicture" id="player4ProfilePicture" src="https://a.ppy.sh/4585661">
+                    </div>
+                    <div class="teamName" id="blueTeamName">TKieen</div>
+                    <div class="teamStars" id="blueTeamStars"></div>
+                </div>
+                <!-- Logo-->
+                <img class="logo" src="static/logo.png" alt="Image of ANZT11S Logo">
+                <img class="logo" src="static/logo.png" alt="Image of ANZT11S Logo">
+            </section>
+            <!-- Mappool Sides -->
+            <section class="mappoolSide" id="mappoolSide1">
+                <div><img src="static/modIcons/NMIcon.svg"></div>
+                <div><img src="static/modIcons/HDIcon.svg"></div>
+                <div><img src="static/modIcons/HRIcon.svg"></div>
+                <div><img src="static/modIcons/DTIcon.svg"></div>
+                <div></div>
+            </section>
+            <section class="mappoolSide" id="mappoolSide2">
+                <div><img src="static/modIcons/NMIcon.svg"></div>
+                <div><img src="static/modIcons/HDIcon.svg"></div>
+                <div><img src="static/modIcons/HRIcon.svg"></div>
+                <div><img src="static/modIcons/DTIcon.svg"></div>
+                <div></div>
+            </section>
+            <!-- Mappool -->
+            <section id="mappool"></section>
+            <!-- Mappool Bottom Text -->
+            <section id="mappoolBottomText">
+                <div class="mappoolBottomText" id="currentActionText"><span id="currentActionTeam" class="currentActionTeamRed">RED</span> <span id="currentAction">BAN</span></div>
+                <div class="mappoolBottomText" id="mappoolSelection">MAPPOOL SECTION</div>
+            </section>
+            <section id="bottom">
+                <!-- Round Information -->
+                <div id="roundInformation">
+                    <div class="roundInformationText" id="matchText">Match <span id="matchNumber">727</span></div>
+                    <div class="roundInformationText" id="stageText">Grand Finals</div>
+                </div>
+                <!-- Chat -->
+                <div id="chatDisplay">
+                    <div id="chatDisplayDottedLine">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2" height="195" viewBox="0 0 2 195" fill="none">
+                            <line opacity="0.3" x1="1" y1="1" x2="0.999991" y2="199" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="0.2 10"/>
+                        </svg>
+                    </div>
+                    <div id="chatDisplayLeft"></div>
+                    <div id="chatDisplayRight">
+                        <div id="chatDisplayRightText">CHAT</div>
+                        <img id="chatDisplayRightIcon" src="static/chatIcon.png">
+                    </div>
+                </div>
+                <!-- Commentators -->
+                <div id="commentatorsSection">
+                    <img id="micophone" src="static/microphone.png" alt="Microphone Icon">
+                    <img id="road" src="static/road.png" alt="Commentator Section Underline">
+                    <div id="voiceLine">Voice line</div>
+                </div>
+            </section>
+        </div>
+
+        <div id="navBar">
+            <section id="navBarColumn1">
+                <div id="navBarMatch">
+                    <h1>Set the match number</h1>
+                    <input type="text" id="navBarMatchText">
+                    <button class="navBarButton navBarFullWidthButton" onclick="handleMatchNumber()">Submit Change</button>
+                </div><br><hr>
+                <div id="navBarRound">
+                    <h1>Set the current round</h1>
+                    <div id="navBarRoundButtonContainer">
+                        <button class="navBarButton navBarRoundButton" onclick="changeRound('Round of 32')">RO32</button>
+                        <button class="navBarButton navBarRoundButton" onclick="changeRound('Round of 16')">RO16</button>
+                        <button class="navBarButton navBarRoundButton" onclick="changeRound('Quarterfinals')">QF</button>
+                        <button class="navBarButton navBarRoundButton" onclick="changeRound('Semifinals')">SF</button>
+                        <button class="navBarButton navBarRoundButton" onclick="changeRound('Finals')">F</button>
+                        <button class="navBarButton navBarRoundButton" onclick="changeRound('Grand Finals')">GF</button>
+                    </div>
+                </div><br><hr>
+                <div id="navBarPickedBy">
+                    <h1>Next Action?</h1>
+                    <div id="navBarPickedByButtonContainer">
+                        <button class="navBarButton navBarHalfWidthButton" onclick="changeNextAction('RED','PROTECT')">Red Protect</button>
+                        <button class="navBarButton navBarHalfWidthButton" onclick="changeNextAction('BLUE','PROTECT')">Blue Protect</button>
+                        <button class="navBarButton navBarHalfWidthButton" onclick="changeNextAction('RED','BAN')">Red Ban</button>
+                        <button class="navBarButton navBarHalfWidthButton" onclick="changeNextAction('BLUE','BAN')">Blue Ban</button>
+                        <button class="navBarButton navBarHalfWidthButton" onclick="changeNextAction('RED','PICK')">Red Pick</button>
+                        <button class="navBarButton navBarHalfWidthButton" onclick="changeNextAction('BLUE','PICK')">Blue Pick</button>
+                        <button id="navBarRemoveAction" class="navBarButton navBarFullWidthButton" onclick="removeAction()">Remove Action</button>
+                        <button id="navBarResetPickBanProtect" class="navBarButton navBarFullWidthButton" onclick="resetPickBanProtect()">Reset Pick Ban Protect</button>
+                    </div>
+                </div><br><hr>
+            </section>
+            <div id="navBarColumnSeparator"></div>
+            <section id="navBarColumn2">
+                <div id="navBarSetStarCount">
+                    <h1>Star Counts?</h1>
+                    <div id="navBarPickedByButtonContainer">
+                        <button class="navBarButton navBarHalfWidthButton" onclick="changeStarCountInner('red','add')">Red ++</button>
+                        <button class="navBarButton navBarHalfWidthButton" onclick="changeStarCountInner('red','minus')">Red --</button>
+                        <button class="navBarButton navBarHalfWidthButton" onclick="changeStarCountInner('blue','add')">Blue ++</button>
+                        <button class="navBarButton navBarHalfWidthButton" onclick="changeStarCountInner('blue','minus')">Blue --</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script src="deps/reconnecting-websocket.min.js"></script>
+        <script src="deps/loadData.js"></script>
+        <script src="deps/index.js"></script>
+        <script src="deps/mappool.js"></script>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+#main {
+    position: absolute; top: 0; left: 0;
+    width: 1920px; height: 1080px;   
+}
+#musicIcon { position: absolute; top: 890px; left: 213px; }
+#musicText {
+    position: absolute; top: 886px; left: 253px;
+    font-family: "Tsukimi Rounded";
+    font-size: 20px;
+    line-height: 28.96px;
+    letter-spacing: 0.6px;
+    color: #9AB2C9;
+}
