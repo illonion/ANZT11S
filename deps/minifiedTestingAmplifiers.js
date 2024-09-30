@@ -28,7 +28,7 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
 function runAPITest(index, amplifierID, teamName, team1_score, team2_score) {
     let test = new XMLHttpRequest()
-    test.open("GET", `http://45.32.105.80:5000/score?team_name=${teamName}` + 
+    test.open("GET", `http://ADDRESS/score?team_name=${teamName}` + 
                     `&amplifier_id=${amplifierID}` +
                     `&player1_id=${player1ID}&player1_score=${player1Score}&player1_combo=${player1Combo}&player1_acc=${player1Acc}&player1_misses=${player1Misses}` +
                     `&player2_id=${player2ID}&player2_score=${player2Score}&player2_combo=${player2Combo}&player2_acc=${player2Acc}&player2_misses=${player2Misses}` +
